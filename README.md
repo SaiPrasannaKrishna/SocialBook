@@ -11,7 +11,9 @@
 ## [Demo](https://saiprasannakrishna.github.io/SocialBook/)
 
 Social book - facebook clone - built using angular 6,bootstrap
-  <img src="1.png"/>
+  <img src="1.PNG"/>
+  <br/>
+  <img src="2.PNG"/>
 
 
 #### Features
