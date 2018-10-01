@@ -1,0 +1,74 @@
+<div class="content"><br/>
+  <div class="row">
+  <div class="col-md-2 col-lg-2 col-xs-2">
+      <div class="list-group profile-stat">
+          <ul class="list-group">
+              <li class="list-group-item">News Feed</li>
+              <li class="list-group-item">Messenger</li>
+              <li class="list-group-item">Marketplace</li>
+              <li class="list-group-item">Groups</li>
+              <li class="list-group-item">Pages</li>
+              <li class="list-group-item">Feed</li>
+              <li class="list-group-item">Friends</li>
+            </ul>
+        </div>
+  </div>
+  <div class="col-md-5 col-lg-5 col-xs-5">
+      <div class="card">
+          <div class="card-header">
+            <b style="color:#636363">Make Post | Photo/Video Album | Live Video</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Write Something here</h5>
+            <a style="color:white;background:#29487d;" class="btn btn-primary">Photo</a>
+          </div>
+        </div><br/>
+        <div class="card" *ngFor="let feed of feedList">
+            <div class="card-body">
+              <h5 class="card-title">
+                <img src={{feed.url}} class="thumbnail-img">
+                {{feed.title}}</h5>
+              <img src={{feed.url}} class="feed-img img-responsive"/>
+            </div>
+            <div class="card-footer text-muted">
+                updated 2 days ago &nbsp;&nbsp; 200 <fa name="heart-o" 
+                size="2x"style="color:#041738;margin-right:4%"></fa>
+                30<fa name="comment-o" 
+                size="2x"style="color:#041738;"></fa>
+              </div>
+          </div>
+  </div>
+  <div class="col-md-3 col-lg-3 col-xs-3">
+      <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+             Stories</h5>
+             <img 
+             *ngFor="let feed of feedList" 
+             src={{feed.url}} class="thumbnail-img img-responsive"/>
+          </div>
+        </div>
+        <div class="card" *ngFor="let c of feedList">
+        <div class="card-body">
+            <h5 class="card-title">
+             Sample Title</h5>
+             <p>Sunset is the time of day when our sky meets the outer space solar winds. 
+               There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a blender.
+               The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. 
+               People slow to a crawl, entranced, fully forgetting the deeds that still must be done. 
+               There is a coolness, a calmness, when the sun does set.</p>
+        </div></div>
+    </div>
+    <div class="col-md-2 col-lg-2 col-xs-2">
+        <div class="list-group chat-stat">
+            <ul class="list-group">
+                <li class="list-group-item" 
+                *ngFor="let prof of feedList">
+                <span class="dot"></span>
+                <img src={{prof.url}} class="profile-img img-responsive"/>
+                {{prof.title}}</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+</div>

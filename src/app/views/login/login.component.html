@@ -1,0 +1,28 @@
+<nav class="navbar justify-content-between">
+  <a class="navbar-brand">Social Book</a>
+  <form class="form-inline" #f="ngForm" (ngSubmit)="login(f)">
+    <input 
+      class="form-control mr-sm-2" 
+      type="search" 
+      placeholder="Username" 
+      aria-label="Search"
+      id="username" 
+      name="username"
+      required 
+      ngModel 
+      #username = "ngModel">
+    <input 
+      class="form-control mr-sm-2" 
+      type="search"
+      placeholder="Password" 
+      aria-label="Search"
+      id="password"
+      name="password"
+      required
+      ngModel
+      #password="ngModel">
+    <button class="btn my-2 my-sm-0"  [disabled]="!f.valid">login</button>
+  </form>
+</nav>
+
+<app-register></app-register>

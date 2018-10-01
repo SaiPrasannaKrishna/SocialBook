@@ -1,0 +1,117 @@
+<div class="row register-backgrnd">
+  <div class="col-md-2 col-lg-2 col-xs-2">
+  </div>
+  <div class="col-md-4 col-lg-4 col-xs-4">
+    <div class="introduction">
+      <h2>Social Books help people connect the world</h2>
+      <ul class="list-group">
+          <li class="list-group-item"><b>See Photos</b> and more and more and more</li>
+          <li class="list-group-item"><b>See Videos</b> and more and more and more</li>
+          <li class="list-group-item"><b>See Content</b> and more and more and more</li>
+        </ul>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-6 col-xs-6">
+    <div class="introduction">
+      <h2>Sign Up</h2>
+      <form #f="ngForm" ngSubmit="register(f)">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4 col-lg-4">
+              <input type="text" 
+                     class="form-control" 
+                     placeholder="FirstName"
+                     id="firstName"
+                     name="firstName"
+                     ngModel 
+                     #firstName="ngModel"
+                     required>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <input type="text" 
+                       class="form-control" 
+                       placeholder="LastName"
+                       id="lastName"
+                       name="lastName"
+                       ngModel 
+                       #lastName="ngModel"
+                       required                       
+                       >
+              </div>
+          </div><br/>
+          <div class="row">
+              <div class="col-md-8 col-lg-8">
+                <input type="text" 
+                      class="form-control" 
+                      placeholder="Email or Phone"
+                      id="phone"
+                      name="phone"
+                      ngModel 
+                      required
+                      #phone="ngModel">
+              </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-md-8 col-lg-8">
+                  <input type="text" 
+                        class="form-control" 
+                        placeholder="Password"
+                        id="password"
+                        name="password"
+                        ngModel 
+                        required
+                        #password="ngModel">
+                </div>
+            </div><br/>
+            <label for="birthday">Birthday</label>
+            <div class="row">
+                <div class="col-md-3 col-lg-3">
+                    <select class="form-control" id="birthday">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                </div>
+                <div class="col-md-2 col-lg-2">
+                    <select class="form-control" id="birthday">
+                      <option>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                      <option>Apr</option>
+                      <option>Jun</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <select class="form-control" id="birthday">
+                      <option>2011</option>
+                      <option>2012</option>
+                      <option>2013</option>
+                      <option>2014</option>
+                      <option>2015</option>
+                    </select>
+                </div>
+            </div><br/>
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Male</label>
+                  </div></div>
+            </div><br/>
+            <p style="font-size:12px;">By Clicking signup,you agree to the Terms and conditions</p>
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+              <button class="btn btn-success sign-up"
+              [disabled] ="!f.valid">Signup</button></div>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

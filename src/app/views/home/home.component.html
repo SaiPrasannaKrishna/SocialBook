@@ -1,0 +1,53 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+    <a class="navbar-brand">SB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto" style="width:100%;">
+        <li class="nav-item" style="width:55%;position: relative;">
+            <input type="text" class="form-control search" placeholder="search" appAutoComplete
+            (onPress)="setFilter($event)"/>
+            <ul *ngIf="!!feedDataTitles"
+            class="list-group"
+            style="position:fixed;background:white;width:100%;position: absolute;">
+              <li  class="list-group-item" *ngFor="let item of feedDataTitles">
+                <img src={{item.url}} class="thumbnail-img img-responsive"/>
+                {{item.title}}</li>
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><b>Profile</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><b>Home</b></a>
+        </li>
+        <li class="nav-item" style="border:none;">
+            <a class="nav-link" ><b><fa name="comments" style="color:#041738;" size="2x"></fa></b></a>
+          </li>
+        <li class="nav-item" style="border:none;">
+            <a class="nav-link" ><b><fa name="users" style="color:#041738;" size="2x"></fa></b></a>
+        </li>
+        <li class="nav-item" style="border:none;">
+            <a class="nav-link" ><b><fa name="bell" style="color:#041738;" size="2x"></fa></b></a>
+        </li>
+        <li class="nav-item" style="border:none;">
+            <a class="nav-link" ><b><fa name="question-circle" style="color:#041738;" size="2x"></fa></b></a>
+        </li>
+        <li class="nav-item dropdown" style="border:none;color:black ;">
+            <a class="nav-link dropdown-toggle" href="#"
+            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b></b></a>
+            <div class="dropdown-menu" style="background: #29487d"
+            aria-labelledby="navbarDropdown">
+                <a class="dropdown-item">settings</a>
+                <a class="dropdown-item">privacy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" (click)="logout()">logout</a>
+              </div>
+        </li>
+      </ul>
+    </div>
+  </nav><br/><br/><br/>
+  <app-content></app-content>

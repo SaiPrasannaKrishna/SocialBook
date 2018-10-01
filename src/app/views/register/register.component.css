@@ -1,0 +1,27 @@
+.register-backgrnd{
+    background:#edf0f5;
+    min-height: 90%;
+}
+.register-backgrnd h2{
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    padding: 42px 0 24px;
+    font-size: 28px;
+    line-height: 36px;
+    color: #525252;
+}
+.list-group-item{
+    background:#edf0f5;
+    border: none;
+    font-size: 18px;
+}
+.sign-up{
+    width:25%;
+}
+
+.ng-touched .ng-invalid
+{
+    border:2px solid red;
+}

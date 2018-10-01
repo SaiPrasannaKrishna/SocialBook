@@ -1,0 +1,41 @@
+.navbar{
+    background: #29487d;
+    justify-content: flex-start;
+ }
+ .navbar-brand{
+     color:white!important;
+     font-size: 30px;
+     font-weight: bolder;
+ }
+ .btn{
+    background: #4267b2;
+    border-color:#29487d;
+    color:white!important;
+ }
+ .img-rad{
+    width: 9%;
+    height: 70%;
+    border-radius: 50%;
+    margin-top: 1%;
+ }
+ 
+ .nav-item a{
+     color: white!important;
+ }
+
+ .dropdown-item:hover{
+     background:black;
+     color:white;
+ }
+ .thumbnail-img{
+    width: 5%;
+    border-radius: 50%;
+    height: 30px;
+}
+
+@media screen and (max-width:991px){
+    .search{
+        display: none;
+    }
+}
+
